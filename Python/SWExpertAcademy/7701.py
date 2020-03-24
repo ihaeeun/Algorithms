@@ -1,0 +1,1 @@
+for tc in range(1,int(input())+1):print(f'#{t}',*sorted({input()for i in range(int(input()))},key=lambda x:(len(x),x)),sep='\n')

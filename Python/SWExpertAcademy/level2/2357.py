@@ -1,0 +1,1 @@
+for t in range(int(input())):print(f'#{t+1}',"No"if input().find('9')<0else"Yes")

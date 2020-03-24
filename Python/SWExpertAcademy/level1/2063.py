@@ -1,0 +1,5 @@
+T = int(input())
+arr = sorted(list(map(int, input().split())))
+print(arr)
+print(T//2+1)
+print(arr[T//2])
