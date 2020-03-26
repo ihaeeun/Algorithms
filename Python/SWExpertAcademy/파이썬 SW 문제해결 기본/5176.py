@@ -1,27 +1,18 @@
-# class Node(object):
-#     def __init__(self, data):
-#         self.data = data
-#         self.left = self.right = None
+global data
+global tree
 
-# def recu(n, arr):
-#     i=0
-#     if n<1:return
-#     recu(2*n, arr)
-#     # i+=1
-#     arr[n]+=i+1
-#     return arr
-#     # i+=1
-#     recu(2*n+1, arr)
-#     n-=1
-
+def inorder(n, last):
+    global data
+    global tree
+    if n <= last:
+        inorder(n*2, last)
+        tree[n] = data
+        data += 1
+        inorder(n*2+1, last)
 
 for t in range(int(input())):
-    n=int(input())
-    arr=[[0,0] for i in range(n+1)]
-
-    for j in range(1, n+1):
-        if j<=n//2:
-            arr[j] = [j*2]+[j*2+1]
-        # if arr[j][1]
-    # print(recu(n, arr))
-    # recu(1, arr)
+    n = int(input())
+    tree = [0]*(n+1)
+    data = 1
+    inorder(1, n)
+    print(f'#{t+1}', tree[1], tree[n//2])
