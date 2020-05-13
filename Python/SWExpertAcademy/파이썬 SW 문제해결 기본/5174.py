@@ -1,17 +1,17 @@
 global node
-global s
+#global s
 
 def recu(n):
-    global s
+    #global s
     if not node[n]:
-        return
+        return 1
+    s=1
     for i in range(len(node[n])):
-        s += 1
-        recu(node[n][i])
-        print(s)
+        s += recu(node[n][i])
+    return s
 
 for t in range(int(input())):
-    global s
+    #global s
     e,n = map(int,input().split())
     node = [[] for i in range(e+2)]
     c = [0]+[int(i) for i in input().split()]
@@ -19,6 +19,6 @@ for t in range(int(input())):
     for i in range(1, e*2, 2):
         node[c[i]]+=[c[i+1]]
     print(node)
-    s=1
-    recu(n)
+    #s=1
+    s=recu(n)
     print(f'#{t+1} {s}')

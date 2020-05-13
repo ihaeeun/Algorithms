@@ -40,9 +40,9 @@ public class BestAlbum {
         System.out.println(playList);
         System.out.println("------------");
 
-        for(int i = 0; i < genreList.size(); i++){
-            if
-        }
+//        for(int i = 0; i < genreList.size(); i++){
+//            if
+//        }
 
         return answer;
     }
